@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "../components/Sidebar";
+import { Providers } from "../components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,23 +21,25 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <div className="flex">
+        <Providers>
+          <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
 
             <Sidebar />
 
-            <main className="flex-1 bg-gray-100 min-h-screen p-6">
+            <main className="flex-1 p-6">
               {children}
             </main>
 
           </div>
+        </Providers>
       </body>
     </html>
   );
