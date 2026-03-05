@@ -26,21 +26,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Providers>
-          <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
+  <body className="bg-gray-100 dark:bg-gray-900">
+    <Providers>
+      <div className="flex min-h-screen">
 
-            <Sidebar />
+        <Sidebar />
 
-            <main className="flex-1 p-6">
-              {children}
-            </main>
+        <main className="flex-1 p-8 max-w-7xl mx-auto w-full">
+          {children}
+        </main>
 
-          </div>
-        </Providers>
-      </body>
-    </html>
+      </div>
+    </Providers>
+  </body>
+</html>
   );
 }

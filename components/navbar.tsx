@@ -3,15 +3,18 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
-   <div className="flex justify-between items-center bg-white dark:bg-gray-800 p-4 shadow rounded-lg">
+    <div className="flex justify-between items-center bg-white dark:bg-gray-800 p-4 shadow rounded-lg">
 
       <div className="flex items-center gap-3">
 
-        <Search size={18} />
+        <Search className="text-gray-600 dark:text-gray-300" size={18} />
 
         <input
-        className="border rounded px-3 py-1 text-sm bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-        placeholder="Search..."
+          className="border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-sm 
+          bg-white dark:bg-gray-700 
+          text-gray-900 dark:text-white 
+          placeholder-gray-400 dark:placeholder-gray-400"
+          placeholder="Search..."
         />
 
       </div>
@@ -20,11 +23,13 @@ export default function Navbar() {
 
         <ThemeToggle />
 
-        <Bell size={18} />
+        <Bell className="text-gray-600 dark:text-gray-300" size={18} />
 
-        <User size={18} />
+        <User className="text-gray-600 dark:text-gray-300" size={18} />
 
-        <span>Pradeep</span>
+        <span className="text-gray-900 dark:text-white">
+          Pradeep
+        </span>
 
       </div>
 

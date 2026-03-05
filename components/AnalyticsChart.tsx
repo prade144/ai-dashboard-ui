@@ -21,7 +21,7 @@ const data = [
 
 export default function AnalyticsChart() {
   return (
-    <div className="bg-white/70 backdrop-blur-lg border border-gray-200 dark:bg-gray-800 rounded-xl shadow p-6">
+    <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow p-6">
 
       <h3 className="text-lg font-semibold mb-4">
         Weekly Users
